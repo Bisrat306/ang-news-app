@@ -1,0 +1,17 @@
+<div class="container">
+  <div>
+    <h1 class="display-4">Sport News</h1>
+  </div>
+  <div class="row" >
+          <div class="col-md-4 col-sm-6 col-12" *ngFor="let nw of news" style="padding-top: 10px;">
+              <div class="card h-100 " >
+                  <img src="{{nw.urlToImage}}" alt="{{nw.title}}">
+                  <h4 class="card-title">{{nw.title}}</h4>
+                  <div >
+                      <p class="card-text">{{nw.content}} </p>
+                      <a [title]="nw.title" [routerLink]="['/news', nw.title]" target="_blank" class="btn btn-primary">Read More</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+</div>

@@ -1,0 +1,28 @@
+
+<!-- <div *ngFor="let y of x"> -->
+
+
+  <div class="container ct-u-paddingTop40 ct-u-paddingBottom100">
+    <div class="dynamicDiv" id="dd.0.1.0"></div>
+    <div class="row">
+       <div class="col-md-12 ct-content">
+          <div class="dynamicDiv" id="dd.0.1.1">
+             <div class="blog-wrapper">
+                <h1>
+                  {{x?.title}}
+                </h1>
+                <img alt="{{x?.title}}" class="img-responsive pull-right blog-inner" src="{{x?.urlToImage}}">
+                <p>
+                   <b> {{x?.publishedAt | date}} , {{x?.author}}</b>
+                </p>
+                <p>
+                  {{x?.content}}
+                </p>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+<!-- </div> -->
