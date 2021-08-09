@@ -12,13 +12,15 @@ export class NewsComponent implements OnInit {
   sportsNews:any[]=[];
   buisnessNews:any[]=[];
   articlesContainer : any[] = []
-  constructor(private newsService: NewsFetchService) { }
+  constructor(private newsService: NewsFetchService,) {
+  }
 
   ngOnInit(): void {
     this.newsService.getTechNews()
       .subscribe((data) => {
 
         this.news = data.articles
+        //this.news=Object.entries(data.articles).slice(1, 4)
         //this.articlesContainer = data.articles
         console.log(this.news)
         //console.log(this.articlesContainer)
