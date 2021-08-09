@@ -1,17 +1,32 @@
-<div class="container">
-  <div>
-    <h1 class="display-4">Tech News</h1>
-  </div>
-  <div class="row" >
-          <div class="col-md-4 col-sm-6 col-12" *ngFor="let nw of news" style="padding-top: 10px;">
-              <div class="card h-100 " >
-                  <img src="{{nw.urlToImage}}" alt="{{nw.title}}">
-                  <h4 class="card-title">{{nw.title}}</h4>
-                  <div >
-                      <p class="card-text">{{nw.content}} </p>
-                      <a [title]="nw.title" [routerLink]="['/news', nw.title]" target="_blank" class="btn btn-primary">Read More</a>
-                  </div>
+<section class="wrapper">
+  <div class="container">
+    <div>
+      <h1 class="display-4">Tech News</h1>
+    </div>
+    <div class="row">
+      <div *ngFor="let nw of news" class="col-sm-4" style="padding-top: 10px;">
+          <div class="card text-white card-has-bg click-col" style="background-image:url({{nw.urlToImage}});">
+            <img class="card-img d-none" src="{{nw.urlToImage}}" alt="{{nw.title}}">
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <small class="card-meta mb-2">{{nw.author}}</small>
+                <h4 class="card-title mt-0 "><a class="text-white" href="{{nw.url}}">{{nw.title}}</a></h4>
+                <small><i class="far fa-clock"></i> {{nw.publishedAt | date}}</small>
               </div>
+              <div class="card-footer">
+                <div class="media">
+                  <img class="mr-3 rounded-circle"
+                    src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/male-512.png"
+                    alt="Generic placeholder image" style="max-width:50px">
+                  <div class="media-body">
+                    <h6 class="my-0 text-white d-block"></h6>
+                    <small>{{nw.author}}</small>
+                  </div>
+                </div>
+            </div>
           </div>
+        </div>
       </div>
-</div>
+    </div>
+  </div>
+</section>

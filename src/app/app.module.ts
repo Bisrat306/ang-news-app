@@ -11,6 +11,8 @@ import { SportNewsComponent } from './sport-news/sport-news.component';
 import { BuisnessNewsComponent } from './buisness-news/buisness-news.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { SearchNewsComponent } from './search-news/search-news.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { SearchNewsComponent } from './search-news/search-news.component';
     SportNewsComponent,
     BuisnessNewsComponent,
     SearchResultsComponent,
-    SearchNewsComponent
+    SearchNewsComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
