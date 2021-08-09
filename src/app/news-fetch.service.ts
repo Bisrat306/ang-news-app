@@ -24,10 +24,11 @@ export class NewsFetchService {
   getBuisnessNews():Observable<any> {
     return this.http.get<any>(this.buisnessNewsUrl)
   }
-  getSearchNews(word:String):Observable<any>{
+  getSearchNews(word:any):Observable<any>{
     if(!word.trim()){
       return of([])
     }
     return this.http.get<any>("https://newsapi.org/v2/everything?q="+word+"&apiKey=4347d1b4f34547fbb80b6beca264a084")
   }
+
 }

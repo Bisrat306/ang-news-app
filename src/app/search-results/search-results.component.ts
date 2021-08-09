@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NewsFetchService } from '../news-fetch.service';
 
@@ -9,12 +9,15 @@ import { NewsFetchService } from '../news-fetch.service';
 })
 export class SearchResultsComponent implements OnInit {
 
-  word="Olympic";
+
   news:any[]=[];
   constructor(private route: ActivatedRoute, private newsService: NewsFetchService) { }
+  routeParams = this.route.snapshot.paramMap;
+  searchTerm = String(this.routeParams.get('word'));
 
   ngOnInit(): void {
-    this.newsService.getSearchNews(this.word)
+
+    this.newsService.getSearchNews(this.searchTerm)
       .subscribe((data) => {
         this.news = data.articles
         //this.articlesContainer = data.articles

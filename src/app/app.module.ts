@@ -10,6 +10,7 @@ import { TechNewsComponent } from './tech-news/tech-news.component';
 import { SportNewsComponent } from './sport-news/sport-news.component';
 import { BuisnessNewsComponent } from './buisness-news/buisness-news.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { SearchNewsComponent } from './search-news/search-news.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     TechNewsComponent,
     SportNewsComponent,
     BuisnessNewsComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    SearchNewsComponent
   ],
   imports: [
     BrowserModule,
